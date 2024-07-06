@@ -289,7 +289,7 @@ class BetterAudio
         
         this.#RequestUpdate();
         
-        document.addEventListener("click", () => { this.#focusCall(); });
+        document.addEventListener("click", () => this.#focusCall());
         
         if (this.autoplay) this.Play();
     }
