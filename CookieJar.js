@@ -1,9 +1,9 @@
 /*
 
+(Currently in alpha, version might be unstable)
 A JavaScript plugin that makes the use of website cookies easier. The built in 'CookieStore' Web API is still experimental and still not compatible with every browser, so :v.
-Originally made for MINDWORLD: Host Connected.
 
-Version : 0.5a
+Version : 0.51a
 
 By CalmBubbles :)
 
