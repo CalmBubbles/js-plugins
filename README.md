@@ -2,7 +2,7 @@
 
 JavaScript plugins that add useful, cool, or totally just random stuff.
 
-### Everything here is under the [WTFPL Licesne](http://www.wtfpl.net/)
+### Everything here is under the [WTFPL Licesne](http://wtfpl.net/)
 
 
 
