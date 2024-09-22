@@ -16,8 +16,8 @@ Originally made for [SpiritAxolotl](https://spax.zone/)'s birthday.
 - [Templates](https://calmbubbles.github.io/works/js-plugins/DialogueSystem/templates)
 
 ### Documentation
-- [Manual](https://calmbubbles.github.io/docs/js-plugins/manual/DialogueSystem.js)
-- [Scripting Reference](https://calmbubbles.github.io/docs/js-plugins/reference/DialogueSystem.js)
+- [Manual](https://calmbubbles.github.io/docs/js-plugins/manual/DialogueSystem)
+- [Scripting Reference](https://calmbubbles.github.io/docs/js-plugins/reference/DialogueSystem)
 
 ### Code
 - [View code](https://calmbubbles.github.io/js-plugins/DialogueSystem.js) ([View on GitHub](https://github.com/calmbubbles/js-plugins/blob/main/DialogueSystem.js))
