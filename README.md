@@ -28,7 +28,10 @@ Last Updated: April 25, 2025
 
 
 ## CookieJar.js
-    Currently in alpha, version might be unstable
+
+> [!WARNING]
+> Currently in alpha, version might be unstable
+
 Makes the use of website cookies easier. The built in 'CookieStore' Web API is still experimental and still not compatible with every browser, so :v.
 
 ### Website and documentation will release on version 1f
@@ -40,7 +43,10 @@ Last Updated: July 6, 2024
 
 
 ## BetterAudio.js
-    Currently in alpha, version might be unstable
+
+> [!WARNING]
+> Currently in alpha, version might be unstable
+
 Makes the use of web audio a lot easier. Adds more feature to audio.<br>
 Originally made for [SpiritAxolotl](https://spax.zone/)'s birthday.
 
