@@ -23,8 +23,8 @@ Originally made for [SpiritAxolotl](https://spax.zone/)'s birthday.
 - [View code](https://calmbubbles.github.io/js-plugins/DialogueSystem.js) ([View on GitHub](https://github.com/calmbubbles/js-plugins/blob/main/DialogueSystem.js))
 - [View raw code](https://calmbubbles.github.io/js-plugins/raw/DialogueSystem.js) ([View on GitHub](https://github.com/calmbubbles/js-plugins/blob/main/raw/DialogueSystem.js))
 
-Version: 2f<br>
-Last Updated: July 6, 2024
+Version: 2.1f<br>
+Last Updated: April 25, 2025
 
 
 ## CookieJar.js

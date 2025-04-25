@@ -3,7 +3,7 @@
 A JavaScript plugin that adds a div based RPG style dialogue system. Which includes animation, audio, images and function call logic.
 Originally made for SpiritAxolotl's birthday.
 
-Version : 2f - Raw
+Version : 2.1f - Raw
 
 By CalmBubbles :)
 
@@ -86,7 +86,8 @@ class DialogueLoop
     static #deltaTime = 0;
     static #calls = [];
     
-    static targetFrameRate = 60;
+    static targetFrameRate = -1;
+    static vSyncCount = 1;
     static timeScale = 1;
     static maximumDeltaTime = 0.1111111;
     
@@ -114,36 +115,47 @@ class DialogueLoop
     {
         return this.#deltaTime;
     }
-    
+
     static #RequestUpdate ()
     {
-        requestAnimationFrame(this.#Update.bind(this));
+        if (this.targetFrameRate === 0 || this.vSyncCount === 1) requestAnimationFrame(this.#Update.bind(this));
+        else if (this.vSyncCount === 2) requestAnimationFrame(() => requestAnimationFrame(this.#Update.bind(this)));
+        else setTimeout(this.#Update.bind(this), 0);
     }
     
+    static #UpdateBase ()
+    {
+        this.#uDeltaTime = (1e-3 * performance.now()) - this.#uTime;
+        this.#uTime += this.#uDeltaTime;
+        
+        let deltaT = this.#uDeltaTime;
+
+        if (deltaT > this.maximumDeltaTime) deltaT = this.maximumDeltaTime;
+        
+        this.#deltaTime = deltaT * this.timeScale;
+        this.#time += this.#deltaTime;
+        
+        this.#Invoke();
+        
+        if (this.timeScale !== 0) this.#frameIndex++;
+    }
+
     static #Update ()
     {
-        const slice = (1 / this.targetFrameRate) - 5e-3;
-        
-        let accumulator = (1e-3 * performance.now()) - this.#uTime;
-        
-        while (accumulator >= slice)
+        if (this.targetFrameRate > 0 && this.vSyncCount === 0)
         {
-            this.#uDeltaTime = (1e-3 * performance.now()) - this.#uTime;
-            this.#uTime += this.#uDeltaTime;
-            
-            let deltaT = this.#uDeltaTime;
-            
-            if (deltaT > this.maximumDeltaTime) deltaT = this.maximumDeltaTime;
-            
-            this.#deltaTime = deltaT * this.timeScale;
-            this.#time += this.#deltaTime;
-            
-            this.#Invoke();
-            
-            this.#frameIndex++;
-            
-            accumulator -= slice;
+            const slice = (1 / this.targetFrameRate) - 5e-3;
+                    
+            let accumulator = (1e-3 * performance.now()) - this.#uTime;
+        
+            while (accumulator >= slice)
+            {
+                this.#UpdateBase();
+
+                accumulator -= slice;
+            }
         }
+        else this.#UpdateBase();
         
         this.#RequestUpdate();
     }
