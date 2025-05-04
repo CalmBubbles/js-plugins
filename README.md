@@ -2,7 +2,8 @@
 
 JavaScript plugins that add useful, cool, or totally just random stuff.
 
-### Everything here is under the [WTFPL License](http://wtfpl.net/)
+> [!IMPORTANT]
+> Everything here is under the [WTFPL License](http://wtfpl.net/)
 
 
 
@@ -23,8 +24,8 @@ Originally made for [SpiritAxolotl](https://spax.zone/)'s birthday.
 - [View code](https://calmbubbles.github.io/js-plugins/DialogueSystem.js) ([View on GitHub](https://github.com/calmbubbles/js-plugins/blob/main/DialogueSystem.js))
 - [View raw code](https://calmbubbles.github.io/js-plugins/raw/DialogueSystem.js) ([View on GitHub](https://github.com/calmbubbles/js-plugins/blob/main/raw/DialogueSystem.js))
 
-Version: 2.1f<br>
-Last Updated: April 25, 2025
+Version: 2.1.1f<br>
+Last Updated: May 4, 2025
 
 
 ## CookieJar.js

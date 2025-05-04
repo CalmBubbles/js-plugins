@@ -3,7 +3,7 @@
 A JavaScript plugin that adds a div based RPG style dialogue system. Which includes animation, audio, images and function call logic.
 Originally made for SpiritAxolotl's birthday.
 
-Version : 2.1f - Raw
+Version : 2.1.1f - Raw
 
 By CalmBubbles :)
 
@@ -59,7 +59,7 @@ class NamedArray
     {
         const obj = this.items.find(item => item.name === name);
         
-        return obj != null ? obj : { };
+        return obj;
     }
 }
 
